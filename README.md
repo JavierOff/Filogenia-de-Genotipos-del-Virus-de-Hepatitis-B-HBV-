@@ -20,9 +20,13 @@ Como biólogo aprendiendo bioinformática, quise replicar un flujo de trabajo re
 
 *Proporción de posiciones diferentes entre cada par de genomas.*
 
-- Los genotipos **B y C** forman un grupo (distancia 5.4 %), y **D y E** forman otro (6.6 %).
-- El genotipo **A** queda separado de ambos grupos.
-- Las distancias entre genotipos están entre ~5 % y ~11 %, un rango coherente con la divergencia descrita para los genotipos de HBV (>8 % entre genotipos distintos).
+Cómo leer los resultados
+
+1. B y C son los más parecidos entre sí (5.4 % de posiciones distintas) y en el árbol salen de una misma rama: forman un grupo.
+2. D y E también forman un grupo (6.6 % de diferencias).
+3. A no se agrupa con ninguno de los dos pares. Se diferencia de todos los demás entre 8.2 % y 9.7 %, casi por igual, así que el método no logra ubicarlo cerca de un grupo en particular.
+4. El árbol es sin raíz: lo que importa es qué genotipos comparten una rama, no si quedan arriba o abajo en el dibujo.
+5. Las diferencias van de ~5 % a ~11 %, el orden de magnitud esperado entre genotipos del mismo virus (la definición clásica habla de más de 8 % en el genoma completo). Mis valores para B–C y D–E quedan algo por debajo de ese umbral, probablemente porque uso una distancia simple (proporción de posiciones distintas, sin corrección por sustituciones múltiples) y un solo genoma de referencia por genotipo.
 
 ## Cómo funciona
 
@@ -53,10 +57,10 @@ Antes de ejecutar, cambia `Entrez.email` por tu propio correo (NCBI lo solicita 
 
 ## Archivos
 
-- `Proyecto_Virologia.py`: script completo
+- `Proyecto_Virologia_HBV.py`: script completo
 - `secuencias_HBV.fasta`: secuencias descargadas
 - `Matriz_Distancias_HBV.csv`: matriz de distancias
-- `Arbol_Filogenetico_HBV.png`: árbol filogenético
+- `Arbol_filogenetico_HBV.png`: árbol filogenético
 
 ## Qué aprendí
 
